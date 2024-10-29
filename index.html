@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/money.png" type="image/x-icon">
+    <title>Saldo</title>
+    <meta name="description"content="APP para quem deseja acompanhar de forma simples e direta diversas métricas de saúde.">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Cálculo de Saldo</h1>
+        <p>Veja se você está no vermelho ou não</p>
+    </header>
+
+    <!-- entrada de dados -->
+<div class="container">
+    <div class="row justify-content-md-center">
+    <div class="col col-lg-20">
+    <form name="frmSaldo">
+        <input type="number" class="form-control form-control-lg" name="txtSalario" placeholder="Salário" required>
+        <input type="number" class="form-control form-control-lg" name="txtAgua" placeholder="Água" required>
+        <input type="number" class="form-control form-control-lg" name="txtLuz" placeholder="Luz" required>
+        <input type="number" class="form-control form-control-lg" name="txtDispesas" placeholder="Despesas" required>
+        <select class="form-control form-control-lg" name="nivel" id="curso" required>
+            <option value="" selected>Selecione o Curso que você faz:</option>
+            <option value="1.1">Técnico em Informática</option>
+            <option value="1.2">Massoterapia</option>
+        </select>
+        <div id="buttons">
+            <input type="button" value="Calcular" onclick="calcular()">
+            <input type="reset" value="Limpar" onclick="limpar()">
+        </div>
+    </form>
+    </div>
+    </div>
+
+    <hr>
+    <h2>Mensalidade no Senac</h2>
+    <div class="info">
+        <div class="infoSaldo">
+            <img src="img/reset.jpg" alt="mostrador" id="grafico">
+            <div id="saldo">Saldo</div>
+            <div id="status">Status</div>
+            <hr>
+            <div id="calorias">Preço da</div>
+        </div>
+    </div>
+</div>
+
+    <script src="app.js"></script>
+    <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
